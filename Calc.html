@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Leon | Exercise 6</title> 
+</head>
+<body>
+    <form action="#" method="">
+        <input type="number" id="meter" placeholder="Enter amount in meter(s)">
+        
+        <select id="unit">
+            <option value="39.37">Inches</option>
+            <option value="3.28">feet</option>
+            <option value="1.09">Yards</option>
+        </select>
+        <button onclick="convertMeter()">CONVERT</button>
+    
+    </form>
+    <script>
+        function convertMeter()
+        {
+            let meters = document.getElementById('meter').value;
+            let units = document.getElementById('unit').value;
+            let convert = parseFloat(meters)*parseFloat(units);
+
+            alert(convert);
+        }
+    </script>
+</body>
+</html>
