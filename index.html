@@ -7,26 +7,47 @@
     <title>De Leon | Exercise 6</title> 
 </head>
 <body>
-    <form action="#" method="">
+      <h1>CONVERTION OF METER</h1>
+        <h3>Engish and Metric System</h3>
+        <div>
+            <textarea id="Result" placeholder="View Result Here" rows="5" cols="40" text-></textarea>
+        </div> 
+        <br>
         <input type="number" id="meter" placeholder="Enter amount in meter(s)">
-        
-        <select id="unit">
-            <option value="39.37">Inches</option>
-            <option value="3.28">feet</option>
-            <option value="1.09">Yards</option>
-        </select>
-        <button onclick="convertMeter()">CONVERT</button>
-    
-    </form>
-    <script>
-        function convertMeter()
-        {
-            let meters = document.getElementById('meter').value;
-            let units = document.getElementById('unit').value;
-            let convert = parseFloat(meters)*parseFloat(units);
+        <form action="#" method="">       
+            <select id="unit1" aria-label="english">
+                <option value="39.37">Inches</option>
+                <option value="3.28">feet</option>
+                <option value="1.09">Yards</option>
+            </select>
+            <button type="submit" onclick="convertMeter1()">CONVERT</button>   
+        </form>
+        <script>
+            function convertMeter1()
+            {
+                let meters1 = document.getElementById('meter').value;
+                let units1 = document.getElementById('unit1').value;
+                let convert1 = parseFloat(meters1)*parseFloat(units1);
 
-            alert(convert);
-        }
-    </script>
+                document.getElementById('Result').value= convert1;
+            }
+        </script>
+            <select id="unit2" aria-label="metric">
+                <option value="100">centimeter</option>
+                <option value="1000">milimeter</option>
+                <option value="1000000">micrometer</option>
+            </select>
+            <button onclick="convertMeter2()">CONVERT</button>
+            <script>
+                function convertMeter2()
+                {
+                    let meters2 = document.getElementById('meter').value;
+                    let units2 = document.getElementById('unit2').value;
+                    let convert2 = parseFloat(meters2)*parseFloat(units2);
+    
+                    document.getElementById('Result').value= convert2;
+                }    
+            </script>
+        </form>   
 </body>
 </html>
